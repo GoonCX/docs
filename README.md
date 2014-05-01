@@ -22,7 +22,7 @@ The reason for a new kind of infrastructure orchestration, monitoring and other 
 ###Enter GoonCX
 We are proposing a light weight server client interaction, where client sits on local machine and reports to server using plugins in terms of monitoring, alerting and configuration management. We can use existing opensource software to comply with underlying well defined clients, later we can also create something which runs independently. Go gives us advantage for providing binaries and no need to install additional software in terms of other popular configuration management tools.
 
-On a very basic primise Go looks like this
+On a very basic level our interaction looks like this
 
 ```ASCII
 
@@ -31,6 +31,8 @@ On a very basic primise Go looks like this
       ------------------                ------------------
 
 ```
+
+This way, server can instruct client to do anything regarding operations. Be it server information, be it creating a LXC container or running some scripts - like build scripts. This way, when ever we want a server can instruct client to perform appropriate operations and then we can take it from there.
 
 
 
